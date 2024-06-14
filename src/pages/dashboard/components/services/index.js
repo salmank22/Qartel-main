@@ -185,7 +185,7 @@ const styles = {
     paddingTop: 50,
   },
   description: {
-    paddingTop: 50,
+    paddingTop: 30,
     display: "flex",
     justifyContent: "center",
     positiion: "relative",
@@ -196,7 +196,7 @@ const styles = {
     maxWidth: "60%",
     textAlign: "center",
     fontFamily: "Rajdhani",
-    fontSize: 16,
+    fontSize: 20,
   },
   gameName: {
     color: "transparent",
