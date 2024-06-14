@@ -55,7 +55,10 @@ const Services = () => {
         </div>
 
         <div style={styles.title}>
-          <OutlinedText strokeWidth={0.7} strokeColor={"#12D6DF"}>COMPS<br /><br />COMING SOON</OutlinedText>
+          <OutlinedText strokeWidth={0.7} strokeColor={"#12D6DF"}>COMPS</OutlinedText>
+        </div>
+        <div style={styles.description}>
+          <p style={styles.descriptionTxt}>{`COMING SOON`}</p>
         </div>
       </div>
       <div style={styles.empty}>
@@ -180,6 +183,20 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     paddingTop: 50,
+  },
+  description: {
+    paddingTop: 50,
+    display: "flex",
+    justifyContent: "center",
+    positiion: "relative",
+  },
+  descriptionTxt: {
+    width: "100%",
+    color: "white",
+    maxWidth: "60%",
+    textAlign: "center",
+    fontFamily: "Rajdhani",
+    fontSize: 16,
   },
   gameName: {
     color: "transparent",
