@@ -1,40 +1,40 @@
 import React from "react";
 import leftArrows from "../../../../assets/left-arrows.png";
 import rightArrows from "../../../../assets/right-arrows.png";
-import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 
 const Slider = () => {
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 768px)' });
+
   return (
-    <SliderWrapper>
+    <div style={styles.slider}>
       <img style={styles.arrows} src={leftArrows} alt="" />
-      <Brand id="brand">
-        CASINO<span className="hideOnDesktop"> <br /> & <br /> </span>NFTs
-      </Brand>
+      <span id="brand" style={styles.brand}>
+        CASINO
+        {!isDesktopOrLaptop && <><br /> & <br /></>}
+        NFTs
+      </span>
       <img style={styles.arrows} src={rightArrows} alt="" />
-    </SliderWrapper>
+    </div>
   );
 };
 
 export default Slider;
 
-const SliderWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  padding-top: 130px;
-`;
-
-const Brand = styled.span`
-  font-size: 3rem;
-  font-family: Audiowide;
-
-  @media (min-width: 768px) {
-    .hideOnDesktop {
-      display: none;
-    }
-  }
-`;
-
 const styles = {
+  slider: {
+    display: "flex",
+    justifyContent: "space-around",
+    paddingTop: 130,
+  },
+  txt: {
+    background: `linear-gradient(180deg, #6E41F7 0%, #F642D7 100%)`,
+    backgroundClip: "text",
+  },
+  brand: {
+    fontSize: "3rem",
+    fontFamily: "Audiowide",
+  },
   arrows: {
     width: "10rem",
   },
