@@ -11,6 +11,7 @@ const Slider = () => {
       <img style={styles.arrows} src={leftArrows} alt="" />
       <span id="brand" style={isDesktopOrLaptop ? styles.brandDesktop : styles.brandMobile}>
         CASINO
+        {isDesktopOrLaptop && <> & </>}
         {!isDesktopOrLaptop && <><br />&<br /></>}
         NFTs
       </span>
