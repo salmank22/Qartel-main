@@ -19,7 +19,7 @@ export default Slider;
 const styles = {
   slider: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     paddingTop: 130,
   },
   txt: {
