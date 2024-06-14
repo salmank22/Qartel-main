@@ -57,7 +57,7 @@ const styles = {
     display: "flex",
     flexDirection: isMobile ? "column" : "rows",
     justifyContent: "space-around",
-    gap: "2%",
+    gap: "30px",
     zIndex: 100,
     padding: "100px 50px",
   }),
