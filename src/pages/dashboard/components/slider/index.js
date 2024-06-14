@@ -1,35 +1,40 @@
 import React from "react";
 import leftArrows from "../../../../assets/left-arrows.png";
 import rightArrows from "../../../../assets/right-arrows.png";
+import styled from "styled-components";
 
 const Slider = () => {
   return (
-    <div style={styles.slider}>
+    <SliderWrapper>
       <img style={styles.arrows} src={leftArrows} alt="" />
-      <span id="brand" style={styles.brand}>
-       CASINO<br /> & <br />NFTs
-      </span>
+      <Brand id="brand">
+        CASINO<span className="hideOnDesktop"> <br /> & <br /> </span>NFTs
+      </Brand>
       <img style={styles.arrows} src={rightArrows} alt="" />
-    </div>
+    </SliderWrapper>
   );
 };
 
 export default Slider;
 
+const SliderWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding-top: 130px;
+`;
+
+const Brand = styled.span`
+  font-size: 3rem;
+  font-family: Audiowide;
+
+  @media (min-width: 768px) {
+    .hideOnDesktop {
+      display: none;
+    }
+  }
+`;
+
 const styles = {
-  slider: {
-    display: "flex",
-    justifyContent: "space-between",
-    paddingTop: 130,
-  },
-  txt: {
-    background: `linear-gradient(180deg, #6E41F7 0%, #F642D7 100%)`,
-    backgroundClip: "text",
-  },
-  brand: {
-    fontSize: "3rem",
-    fontFamily: "Audiowide",
-  },
   arrows: {
     width: "10rem",
   },
