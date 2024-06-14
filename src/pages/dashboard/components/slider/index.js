@@ -9,9 +9,9 @@ const Slider = () => {
   return (
     <div style={styles.slider}>
       <img style={styles.arrows} src={leftArrows} alt="" />
-      <span id="brand" style={styles.brand}>
+      <span id="brand" style={isDesktopOrLaptop ? styles.brandDesktop : styles.brandMobile}>
         CASINO
-        {!isDesktopOrLaptop && <><br /> & <br /></>}
+        {!isDesktopOrLaptop && <><br />&<br /></>}
         NFTs
       </span>
       <img style={styles.arrows} src={rightArrows} alt="" />
@@ -26,14 +26,16 @@ const styles = {
     display: "flex",
     justifyContent: "space-around",
     paddingTop: 130,
+    textAlign: "center",
   },
-  txt: {
-    background: `linear-gradient(180deg, #6E41F7 0%, #F642D7 100%)`,
-    backgroundClip: "text",
-  },
-  brand: {
+  brandDesktop: {
     fontSize: "3rem",
     fontFamily: "Audiowide",
+  },
+  brandMobile: {
+    fontSize: "3rem",
+    fontFamily: "Audiowide",
+    display: "block",
   },
   arrows: {
     width: "10rem",
